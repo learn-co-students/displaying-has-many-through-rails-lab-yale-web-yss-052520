@@ -1,0 +1,9 @@
+<%@appts.each {|app|%>
+    <% date = app.appointment_datetime%>
+    <%= "#{date.strftime("%B %d, %Y")} 
+    at #{date.strftime("%H:%M")}" %>
+<%}%>
+
+<%@doctors.each {|doctor|%>
+    <%=link_to doctor.name, doctor_path(doctor)%>
+<%}%>

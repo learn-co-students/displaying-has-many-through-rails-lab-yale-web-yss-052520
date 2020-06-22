@@ -1,0 +1,7 @@
+<ul>
+    <%@patients.each {|patient|%>
+        <li>
+            <%= "Name: #{patient.name} Number of Appointments: #{patient.appt_count}" %>
+        </li>
+    <%}%>
+</ul>
