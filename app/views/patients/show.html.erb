@@ -1,0 +1,7 @@
+<h3><%= @patient.name%> appointments</h3>
+
+<% @patient.appointments.each do |appointment|%>
+    <% @patient_doctor = @patient.doctors.find(appointment.doctor_id) %>
+    doctor: <%= link_to @patient_doctor.name, doctor_path(@patient_doctor)%>
+    when: <%= appointment.h_time %><br>
+<% end %>
